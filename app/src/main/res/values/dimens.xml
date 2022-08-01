@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Height of each list item -->
+    <dimen name="list_item_height">32dp</dimen>
+    <dimen name="search_menu_height">32dp</dimen>
+
+    <!-- Dimension of padding or margin -->
+    <dimen name="padding">8dp</dimen>
+
+</resources>

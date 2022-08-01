@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context="com.example.android.libretto.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/search_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:focusableInTouchMode="true"
+        android:minHeight="@dimen/search_menu_height"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding">
+
+        <EditText
+            android:id="@+id/query_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/example_query"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:maxLines="1" />
+
+        <ImageView
+            android:id="@+id/query_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@drawable/ic_search_white_36dp" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_container"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:drawSelectorOnTop="true"
+        android:orientation="vertical" />
+
+    <!-- Empty view is only visible when the list has no items. -->
+    <TextView
+        android:id="@+id/empty_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@color/colorPrimary"
+        tools:text="@string/no_books" />
+
+    <ProgressBar
+        android:id="@+id/loading_spinner"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>
